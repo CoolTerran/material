@@ -8,9 +8,9 @@ import { Menu } from '../interfaces/menu';
 })
 export class MenuService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { } //inyectando clase
 
   getMenu(): Observable<Menu[]> {
-    return this.http.get<Menu[]>('./assets/data/menu.json');
+    return this.http.get<Menu[]>('./assets/data/menu.json'); //devuelve array de interfaces de menus
   }
 }
